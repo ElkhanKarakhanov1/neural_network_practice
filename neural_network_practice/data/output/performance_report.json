@@ -1,0 +1,127 @@
+{
+  "created_at": "2026-10-16T15:12:18.820340+00:00",
+  "input_dir": "D:\\AI Project\\neural_network_practice\\data\\input",
+  "extensions": [
+    ".csv"
+  ],
+  "config": {
+    "readers": 4,
+    "processes": 2,
+    "queue_size": 8,
+    "max_pending": 4,
+    "copies": 2,
+    "image_size": [
+      64,
+      64
+    ],
+    "noise_std": 0.02,
+    "seed": 42
+  },
+  "repeats": 3,
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.5.3",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "cpu_count": 12
+  },
+  "measurement": "End-to-end: scan, read, augment, normalize and save; includes pool startup and shutdown; excludes result comparison",
+  "runs": {
+    "sequential": [
+      {
+        "file_count": 1,
+        "read_count": 1,
+        "found_count": 1,
+        "input_bytes": 36,
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float32",
+        "elapsed_seconds": 0.0028759000124409795,
+        "output_file": "D:\\AI Project\\neural_network_practice\\data\\output\\sequential.npy"
+      },
+      {
+        "file_count": 1,
+        "read_count": 1,
+        "found_count": 1,
+        "input_bytes": 36,
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float32",
+        "elapsed_seconds": 0.0022048000246286392,
+        "output_file": "D:\\AI Project\\neural_network_practice\\data\\output\\sequential.npy"
+      },
+      {
+        "file_count": 1,
+        "read_count": 1,
+        "found_count": 1,
+        "input_bytes": 36,
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float32",
+        "elapsed_seconds": 0.0023900000378489494,
+        "output_file": "D:\\AI Project\\neural_network_practice\\data\\output\\sequential.npy"
+      }
+    ],
+    "parallel": [
+      {
+        "file_count": 1,
+        "read_count": 1,
+        "found_count": 1,
+        "input_bytes": 36,
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float32",
+        "elapsed_seconds": 1.2783606000011787,
+        "output_file": "D:\\AI Project\\neural_network_practice\\data\\output\\parallel.npy"
+      },
+      {
+        "file_count": 1,
+        "read_count": 1,
+        "found_count": 1,
+        "input_bytes": 36,
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float32",
+        "elapsed_seconds": 1.1341400999808684,
+        "output_file": "D:\\AI Project\\neural_network_practice\\data\\output\\parallel.npy"
+      },
+      {
+        "file_count": 1,
+        "read_count": 1,
+        "found_count": 1,
+        "input_bytes": 36,
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float32",
+        "elapsed_seconds": 1.138421699986793,
+        "output_file": "D:\\AI Project\\neural_network_practice\\data\\output\\parallel.npy"
+      }
+    ]
+  },
+  "sequential_median_seconds": 0.0023900000378489494,
+  "parallel_median_seconds": 1.138421699986793,
+  "speedup": 0.0020993978223330387,
+  "outputs_equal": true,
+  "comparison_by_repeat": [
+    true,
+    true,
+    true
+  ],
+  "notes": [
+    "Input must remain unchanged during all runs.",
+    "OS file caching affects timing; order alternates but caches are not cleared.",
+    "CSV is not augmented; image copies and seeds are identical in both modes.",
+    "Final arrays are accumulated in RAM in both implementations."
+  ]
+}
